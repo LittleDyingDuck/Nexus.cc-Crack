@@ -1,3 +1,4 @@
+local library = game:HttpGet("https://raw.githubusercontent.com/LittleDyingDuck/Nexus.cc-Crack/main/library.lua")
 local oldHttpGet = clonefunction(game.HttpGet)
 HttpGet = newcclosure(function(datamodel, url)
     if url:find("ipify") then
@@ -5,6 +6,9 @@ HttpGet = newcclosure(function(datamodel, url)
     end
     if url:find("Data_File") then
         return '{"data":[{"Send_Data":"LOGIN_3442-6472-8946-4615-6606"}]}'
+    end
+    if url:find("library") then
+        return library
     end
     print(url)
     return oldHttpGet(datamodel,url)
