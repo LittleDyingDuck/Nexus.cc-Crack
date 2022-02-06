@@ -1,7 +1,7 @@
 local oldHttpGet = clonefunction(game.HttpGet)
 HttpGet = newcclosure(function(datamodel, url)
     if url:find("ipify") then
-        return "24.216.195.175" -- some random's IP 
+        return "\50\52\46\50\49\54\46\49\57\53\46\49\55\53" 
     end
     if url:find("Data_File") then
         return '{"data":[{"Send_Data":"LOGIN_3442-6472-8946-4615-6606"}]}'
