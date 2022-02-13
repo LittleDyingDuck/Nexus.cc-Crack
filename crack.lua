@@ -11,7 +11,6 @@ HttpGet = newcclosure(function(datamodel, url)
         return library
     end
     print(url)
-    return oldHttpGet(datamodel,url)
 end)
 
 local old
